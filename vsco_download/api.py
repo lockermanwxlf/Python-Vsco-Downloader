@@ -141,7 +141,7 @@ class VscoApi:
             if not info['is_video'] else
 
             VscoMedia(
-                self.session, f'https//{info['video_url']}', info['upload_date'], False)
+                self.session, f'https://{info['video_url']}', info['upload_date'], False)
 
             for info in map(lambda x: x[x['type']], json['media'])
 
